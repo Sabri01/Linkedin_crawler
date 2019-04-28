@@ -2,7 +2,7 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome(r'C:\Users\Sabri\Downloads\chromedriver.exe')
+driver = webdriver.Chrome(insert path to chromedriver)
 driver.get('http://linkedin.com')
 
 username = driver.find_element_by_class_name('login-email')
@@ -23,4 +23,3 @@ search_query.send_keys(Keys.RETURN)
 linkedin_urls = driver.find_elements_by_tag_name('cite')
 linkedin_urls = [url.text for url in linkedin_urls]
 
-linkedin_urls
